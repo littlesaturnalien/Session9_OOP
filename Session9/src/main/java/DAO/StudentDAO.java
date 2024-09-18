@@ -38,4 +38,14 @@ public class StudentDAO implements Session9 {
             System.out.println(student);
         }
     }
+
+    public int getAverageAge() {
+        int sumOfAges = 0;
+        int numberOfStudents = 0;
+        for (Student student : students) {
+            sumOfAges = sumOfAges + student.getAge();
+            numberOfStudents++;
+        }
+        return sumOfAges / numberOfStudents;
+    }
 }

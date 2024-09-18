@@ -11,12 +11,13 @@ public class Main {
         String menu = "1. Agregar estudiante\n" +
                 "2. Buscar estudiante\n" +
                 "3. Mostrar estudiantes\n" +
-                "4. Salir\n" +
+                "4. Calcular promedio de edades\n" +
+                "5. Salir\n" +
                 " ---> ";
 
         int option = 0;
 
-        while (option != 4) {
+        while (option != 5) {
             System.out.print(menu);
             option = scanner.nextInt();
 
@@ -49,6 +50,11 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("El promedio de edad entre todos los estudiantes es " + students.getAverageAge());
+                    System.out.println();
+                    break;
+
+                case 5:
                     System.out.println("Saliendo...");
                     break;
 
